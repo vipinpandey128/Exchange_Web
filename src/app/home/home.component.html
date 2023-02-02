@@ -1,0 +1,20 @@
+Page title : {{title}}
+<br>
+<br>
+<input type="text" [(ngModel)]="title" />
+<br>
+<br>
+{{title | uppercase }}
+<br>
+{{title | lowercase }}
+<br>
+{{title | json }}
+
+
+<button (click)="AddServer()">Add Server</button>
+
+<br><br>
+
+<ul>
+    <li *ngFor="let server of servers;let i = index" (click)="RemoveServer(i)">{{server}}</li>
+</ul>
